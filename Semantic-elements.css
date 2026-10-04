@@ -1,0 +1,676 @@
+/* =========================================================
+   ABHIJEET KUMAR RAY - PERSONAL PORTFOLIO
+   Professional Cream / White / Grey Theme
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLOR VARIABLES
+   ========================================================= */
+
+:root {
+    --page-bg: #f7f6f2;
+    --white: #ffffff;
+    --cream: #f1efe9;
+    --cream-dark: #e5e1d6;
+    --navy: #293548;
+    --navy-light: #435168;
+    --text: #344054;
+    --text-light: #667085;
+    --muted: #99927f;
+    --border: #e5e3de;
+    --border-light: #eeece7;
+    --accent: #aaa28d;
+    --accent-dark: #918873;
+    --shadow: rgba(41, 53, 72, 0.07);
+    --max-width: 1200px;
+}
+
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. BODY
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--page-bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   4. GENERAL CONTAINER
+   ========================================================= */
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   5. HEADER
+   ========================================================= */
+
+.site-header {
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 90%;
+    max-width: var(--max-width);
+    min-height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   6. NAME / LOGO
+   ========================================================= */
+
+.logo-area h1 {
+    color: var(--navy);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.logo-area p {
+    color: var(--text-light);
+    font-size: 0.76rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   7. NAVIGATION
+   ========================================================= */
+
+.navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.navigation a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 3px 20px;
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.navigation a:hover {
+    color: var(--accent-dark);
+}
+
+
+/* Active navigation */
+
+.navigation a.active {
+    font-weight: 600;
+}
+
+.navigation a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    height: 2px;
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   8. ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+    background: var(--white);
+    padding: 65px 0 60px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+
+/* =========================================================
+   9. PROFILE CARD
+   ========================================================= */
+
+.profile-card {
+    width: 240px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 6px 22px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(41, 53, 72, 0.10);
+}
+
+.profile-card img {
+    display: block;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.profile-card figcaption {
+    padding: 10px 8px;
+    color: var(--navy);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   10. SECTION LABEL
+   ========================================================= */
+
+.section-label {
+    margin-bottom: 7px;
+    color: var(--muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   11. HEADINGS
+   ========================================================= */
+
+h2 {
+    color: var(--navy);
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    max-width: 620px;
+    font-size: 2rem;
+}
+
+.about-content>p:not(.section-label) {
+    max-width: 650px;
+    color: var(--text-light);
+    font-size: 0.94rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   12. PROJECT BUTTON
+   ========================================================= */
+
+.primary-button {
+    display: inline-block;
+    margin-top: 7px;
+    padding: 10px 17px;
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.primary-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   13. SKILLS SECTION
+   ========================================================= */
+
+.skills-section {
+    background: var(--page-bg);
+    padding: 55px 0 65px;
+}
+
+
+/* =========================================================
+   14. SKILLS GRID
+   ========================================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   15. SKILL CARD
+   ========================================================= */
+
+.skill-card {
+    min-height: 112px;
+    padding: 17px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(41, 53, 72, 0.025);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-3px);
+    border-color: #d8d4ca;
+    box-shadow: 0 8px 22px var(--shadow);
+}
+
+
+/* =========================================================
+   16. SKILL ICON CIRCLE
+   ========================================================= */
+
+.skill-icon {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #efede8;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   17. SKILL LOGOS
+   ========================================================= */
+
+.skill-icon img {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+
+/* HTML/CSS logos */
+
+.skill-card:nth-child(1) .skill-icon img,
+.skill-card:nth-child(2) .skill-icon img {
+    width: 36px;
+    height: 36px;
+}
+
+
+/* Python logo */
+
+.skill-card:nth-child(3) .skill-icon img {
+    width: 38px;
+    height: 38px;
+}
+
+
+/* Linux logo */
+
+.skill-card:nth-child(4) .skill-icon img {
+    width: 36px;
+    height: 36px;
+}
+
+
+/* Networking logo */
+
+.skill-card:nth-child(5) .skill-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* Bash logo */
+
+.skill-card:nth-child(6) .skill-icon img {
+    width: 36px;
+    height: 36px;
+}
+
+
+/* =========================================================
+   18. SKILL TEXT
+   ========================================================= */
+
+.skill-content {
+    flex: 1;
+}
+
+.skill-content h3 {
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.skill-content p {
+    color: var(--text-light);
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   19. PROJECTS SECTION
+   ========================================================= */
+
+.projects-section {
+    background: var(--white);
+    padding: 65px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    background: var(--page-bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 25px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px var(--shadow);
+}
+
+.project-card h3 {
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--text-light);
+    font-size: 0.84rem;
+    line-height: 1.65;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.project-card a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   20. CONTACT SECTION
+   ========================================================= */
+
+.contact-section {
+    background: var(--page-bg);
+    padding: 65px 0 70px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 700px;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    box-shadow: 0 6px 22px var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--navy);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d8d5cc;
+    border-radius: 5px;
+    background: #faf9f6;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(170, 162, 141, 0.15);
+}
+
+.contact-form button {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 5px;
+    background: var(--accent);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-form button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   21. FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: var(--navy);
+    padding: 28px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    color: #d9dde3;
+    font-size: 0.76rem;
+    margin: 4px 0;
+}
+
+
+/* =========================================================
+   22. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .header-container {
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .navigation {
+        gap: 22px;
+    }
+    .navigation a {
+        padding: 7px 2px 9px;
+    }
+    .navigation a.active::after {
+        bottom: 0;
+    }
+    .about-container {
+        grid-template-columns: 210px 1fr;
+        gap: 40px;
+    }
+    .profile-card {
+        width: 210px;
+    }
+    .profile-card img {
+        height: 250px;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   23. MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+    .container,
+    .header-container {
+        width: 90%;
+    }
+    .site-header {
+        position: relative;
+    }
+    .header-container {
+        align-items: flex-start;
+    }
+    .navigation {
+        width: 100%;
+        gap: 17px;
+        flex-wrap: wrap;
+    }
+    .navigation a {
+        font-size: 0.78rem;
+    }
+    .about-section {
+        padding: 45px 0;
+    }
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .profile-card {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .profile-card img {
+        height: 285px;
+    }
+    .about-content h2 {
+        font-size: 1.65rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .skills-section {
+        padding: 45px 0 55px;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .skill-card {
+        min-height: 105px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+
+/* =========================================================
+   24. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+    .logo-area h1 {
+        font-size: 1.1rem;
+    }
+    .logo-area p {
+        font-size: 0.7rem;
+    }
+    .navigation {
+        gap: 12px;
+    }
+    .navigation a {
+        font-size: 0.73rem;
+    }
+    .profile-card {
+        width: 220px;
+    }
+    .profile-card img {
+        height: 255px;
+    }
+    .about-content h2 {
+        font-size: 1.45rem;
+    }
+    .skill-card {
+        padding: 15px;
+    }
+}
